@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+    <script src="./js/script.js" type="module" defer></script>
+        
+    <title>Segundo Parcial Pavon Brian</title>
+  </head>
+  <body>
+    <header>    
+      <nav class="navbar navbar-expand navbar-dark bg-primary" >
+        <div class="container-fluid">
+            <a class="navbar-brand d-none d-sm-inline-block" href="#">
+              <img class="logo" src="./images/imagenFooter.jpg" alt="imagen del footer" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toogle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Anuncio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white"href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link text-white"href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+    </header>    
+    <p class="administracion">Administracion</p>    
+    <img class="imgPrincipal"src="./images/imagenPrincipal.jpg" alt="auto fachero"/>
+    <!--FORMULARIO-->
+    <div class="formulario container">
+        <form action="#">
+          <div class="form-group border bg-light text-black">
+
+            <fieldset class="form-group">
+              <legend>Información del Anuncio</legend>
+              <!--ID OCULTO-->
+              <input type="hidden" name="id" >
+              <!--Titulo-->
+              <label for="titulo">Titulo:</label>
+              <br>
+              <input type="text" class="form-control form-control-sm" name="txtTitulo" id="titulo" placeholder="Titulo" required>
+              <br>
+              <!--Seccion radio button-->
+              <label >Transaccion:</label>
+              <br>
+              <label for="venta">Venta</label>
+              <input type="radio" name="transaccion" id="venta" value="venta">
+              <label for="alquiler">Alquiler</label>
+              <input type="radio" name="transaccion" id="alquiler" value="alquiler">
+              <br>
+              <!--Descripcion-->
+              <label for="descripcion">Descripcion:</label>
+              <br>
+              <input type="text" name="txtDescripcion" id="descripcion" placeholder="Descripcion" required class="form-control form-control-sm">
+              <br>
+              <!--Precio-->
+              <label for="precio">Precio:</label>
+              <br>
+              <input type="text" name="txtPrecio" id="precio" placeholder="Precio" required class="form-control form-control-sm">
+              <br>
+              <!--Varias opciones-->
+              <img class="iconos" src="./images/icono1.svg" alt="iconoUno">
+              <input type="text" name="txtPuertas" id="puertas" required placeholder="Puertas" class="form-control form-control-sm">
+              <img class="iconos" src="./images/icono2.svg" alt="iconoDos">
+              <input type="text" name="txtPuertas" id="kms" required placeholder="KMs" class="form-control form-control-sm">
+              <img class="iconos" src="./images/icono3.svg" alt="iconoTres">
+              <input type="text" name="txtPuertas" id="potencia" required placeholder="Potencia" class="form-control form-control-sm">
+            </fieldset>
+            <!--Botones-->
+            <input type="submit" id="btnPrincipal" value="Guardar" class="btn btn-success">
+            <input type="button" id="btnEliminar" value="Eliminar" class="invisible boton btn btn-danger">
+            <input type="button" id="btnCancelar" value="Cancelar" class="invisible boton btn btn-secondary">
+          </div>
+            
+        </form> 
+    </div>
+
+    <!--FILTROS Y PROMEDIO-->
+    
+    <div class="container bg-secondary text-dark rounded w-auto p-3 border border-dark">
+      <div class="row text-center" >
+          <div class="col ">
+             <div class="bg-transparent text-dark">
+                <strong>
+                    <label  for="filtroTransaccion">Filtrar Transaccion </label>
+                </strong>
+                <select name="filtrar" id="filtro" class="form-control">
+                  <option name="selectTransacccion" value="#">Seleccione la transaccion</option>
+                  <option name="selectTransacccion" value="venta">Venta</option>
+                  <option name="selectTransacccion" value="alquiler">Alquiler</option>
+                </select>              
+             </div>
+
+          </div> 
+
+          <div class="col">
+
+              <div class="bg-transparent text-dark">
+                  <strong>
+                      <label for="promedio" class="col-sm-2 col-form-label">Promedio</label>
+                  </strong>
+                  <br>
+                  <input type="text" id="inputPromedio" name="promedio" placeholder="N/A">
+              </div>              
+          </div> 
+        </div>
+    </div>
+
+  <!--CHECKS-->
+  
+  <div class="container">
+    <div class="form-check form-check-inline d-flex justify-content-around bg-warning text-white rounded" id="contenedorCheckbox">
+
+      <div class="col">
+        <label class="form-check-label invisible" for="checkDescripcion">Id</label>
+        <input class="form-check-input invisible" type="checkbox" name="checkDescripcion" id="chkid" value="id" checked>
+      </div>
+
+      <div class="col">
+        <label class="form-check-label" for="checkTitulo">Titulo</label>
+        <input class="form-check-input" type="checkbox" name="checkTitulo" id="chktitulo" value="titulo" checked>
+      </div>
+
+      <div class="col">
+        <label class="form-check-label"  for="checkTransaccion">Transaccion</label>
+        <input class="form-check-input" type="checkbox" name="checkTransaccion" id="chktransaccion" value="transaccion" checked>
+      </div>
+
+      <div class="col">
+        <label class="form-check-label" for="checkDescripcion">Descripcion</label>
+        <input class="form-check-input" type="checkbox" name="checkDescripcion" id="chkdescripcion" value="descripcion" checked>
+      </div>
+      
+      <div class="col">
+        <label class="form-check-label" for="checkPrecio">Precio</label>
+        <input class="form-check-input" type="checkbox" name="checkPrecio" id="chkprecio" value="precio" checked>
+      </div>
+
+      <div class="col">
+        <label class="form-check-label" for="checkNumPuertas">Puertas</label>
+        <input class="form-check-input" type="checkbox" name="checkNumPuertas" id="chkpuertas" value="puertas" checked>
+      </div>
+      
+      <div class="col">
+        <label class="form-check-label" for="checkNumKm">Kms</label>
+        <input class="form-check-input" type="checkbox" name="checkNumKm" id="chkkms" value="kms" checked>
+      </div>
+          
+      <div class="col">
+        <label class="form-check-label" for="checkPotencia">Potencia</label>
+        <input class="form-check-input" type="checkbox" name="checkPotencia" id="chkpotencia" value="potencia" checked>
+      </div>            
+        
+    </div>
+  </div>
+  <!--TABLA DINAMICA-->
+  <div id="divTabla" class="table tabla table-dark table-striped">
+        
+  </div>
+    
+  <footer>
+      
+      <nav class="navbar navbar-expand navbar-dark bg-primary" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Anuncios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      <span>Todos los derechos Reservados para <b>Brian Pavon</b> 2021 &copy</span>
+      </nav>
+  </footer>    
+
+  </body>
+</html>

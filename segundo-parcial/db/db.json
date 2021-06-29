@@ -1,0 +1,44 @@
+{
+  "vehiculos": [
+    {
+      "id": 1,
+      "titulo": "Jeep Renegade",
+      "transaccion": "alquiler",
+      "descripcion": "Jeep Renegade 2018",
+      "precio": "1000000",
+      "puertas": "5",
+      "kms": "10.000",
+      "potencia": "130"
+    },
+    {
+      "id": 2,
+      "titulo": "Renault Megane",
+      "transaccion": "venta",
+      "descripcion": "Renault Megane 2014",
+      "precio": "800000",
+      "puertas": "5",
+      "kms": "80000",
+      "potencia": "140"
+    },
+    {
+      "id": 10,
+      "titulo": "Volkswagen Golf",
+      "transaccion": "alquiler",
+      "descripcion": "Volkswagen Golf 2018",
+      "precio": "1500000",
+      "puertas": "5",
+      "kms": "50000",
+      "potencia": "150"
+    },
+    {
+      "id": 11,
+      "titulo": "Volkswagen Amarok",
+      "transaccion": "venta",
+      "descripcion": "Volkswagen Amarok 2020",
+      "precio": "3450000",
+      "puertas": "4",
+      "kms": "45000",
+      "potencia": "180"
+    }
+  ]
+}
