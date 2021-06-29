@@ -1,48 +1,5 @@
 
-/*header, footer{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-}
-header ul{
-    list-style-type: none;
-}
-footer ul{
-    list-style-type: none;
-    display: flex;
-}
-ul li a{
-    text-decoration: none;
-    padding: 10px 10px;
-    color: white;    
-    margin: 5px 10px;
-}
-input{
-    background-color: lightgrey;    
-    border-radius: 5px;
-}
-footer p{
-    color: white;
-}
 
-table,th,td{
-    border: 2px solid black;
-    padding: 4px;
-    border-collapse: collapse;
-    text-transform: capitalize;
-    text-align: center;
-}
-thead{
-    border-collapse: collapse;
-    background-color: coral;    
-}
-aside{
-    background-color: cadetblue;
-    width: 30%;
-    display: none;   
-}*/
 
 /*CLASES*/
 .boton{
@@ -74,7 +31,7 @@ aside{
     justify-content: space-around;    
 }
 .iconos{
-    width: 3%;
+    width: 8%;
 }
 
 .invisible{
@@ -106,7 +63,7 @@ aside{
 /*MEDIA QUERY*/
 
 
-@media(min-width: 650px){
+/*@media(min-width: 650px){
     footer,header{
         flex-direction: row;
         justify-content: space-between;
@@ -114,4 +71,4 @@ aside{
     aside{
         display: block;
     }
-}
+}*/

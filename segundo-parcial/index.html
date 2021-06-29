@@ -19,7 +19,7 @@
       <nav class="navbar navbar-expand navbar-dark bg-primary" >
         <div class="container-fluid">
             <a class="navbar-brand d-none d-sm-inline-block" href="#">
-              <img class="logo" src="./images/imagenFooter.jpg" alt="imagen del footer" />
+              <img width="100" src="./images/imagenFooter.jpg" alt="imagen del footer" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toogle navigation">
@@ -38,45 +38,60 @@
     </header>    
     <p class="administracion">Administracion</p>    
     <img class="imgPrincipal"src="./images/imagenPrincipal.jpg" alt="auto fachero"/>
+
     <!--FORMULARIO-->
     <div class="formulario container">
         <form action="#">
           <div class="form-group border bg-light text-black">
 
             <fieldset class="form-group">
-              <legend>Información del Anuncio</legend>
+              <legend class="font-weight-bold">Información del Anuncio</legend>
               <!--ID OCULTO-->
               <input type="hidden" name="id" >
               <!--Titulo-->
-              <label for="titulo">Titulo:</label>
-              <br>
-              <input type="text" class="form-control form-control-sm" name="txtTitulo" id="titulo" placeholder="Titulo" required>
-              <br>
-              <!--Seccion radio button-->
-              <label >Transaccion:</label>
-              <br>
-              <label for="venta">Venta</label>
-              <input type="radio" name="transaccion" id="venta" value="venta">
-              <label for="alquiler">Alquiler</label>
-              <input type="radio" name="transaccion" id="alquiler" value="alquiler">
-              <br>
+              <div class="form-group">
+                <label class="font-italic" for="titulo">Titulo:</label>                
+                <input type="text" class="form-control form-control-sm" name="txtTitulo" id="titulo" placeholder="Titulo" required>
+              </div>
+              
+              <!--Seccion radio button TRANSACCION-->
+              <div class="form-group">
+                <label class="font-italic">Transaccion:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="transaccion" id="venta" value="venta">
+                  <label class="form-check-label font-weight-light" for="venta">Venta</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="transaccion" id="alquiler" value="alquiler">
+                  <label class="form-check-label font-weight-light" for="alquiler">Alquiler</label>
+                </div>
+              </div>
+              
               <!--Descripcion-->
-              <label for="descripcion">Descripcion:</label>
-              <br>
-              <input type="text" name="txtDescripcion" id="descripcion" placeholder="Descripcion" required class="form-control form-control-sm">
-              <br>
+              <div class="form-group">
+                <label class="font-italic" for="descripcion">Descripcion:</label>                
+                <input type="text" name="txtDescripcion" id="descripcion" placeholder="Descripcion" required class="form-control form-control-sm">
+              </div>              
+              
               <!--Precio-->
-              <label for="precio">Precio:</label>
-              <br>
-              <input type="text" name="txtPrecio" id="precio" placeholder="Precio" required class="form-control form-control-sm">
-              <br>
+              <div class="form-group">
+                <label class="font-italic" for="precio">Precio:</label>                
+                <input type="text" name="txtPrecio" id="precio" placeholder="Precio" required class="form-control form-control-sm">
+              </div>
+              
               <!--Varias opciones-->
-              <img class="iconos" src="./images/icono1.svg" alt="iconoUno">
-              <input type="text" name="txtPuertas" id="puertas" required placeholder="Puertas" class="form-control form-control-sm">
-              <img class="iconos" src="./images/icono2.svg" alt="iconoDos">
-              <input type="text" name="txtPuertas" id="kms" required placeholder="KMs" class="form-control form-control-sm">
-              <img class="iconos" src="./images/icono3.svg" alt="iconoTres">
-              <input type="text" name="txtPuertas" id="potencia" required placeholder="Potencia" class="form-control form-control-sm">
+              <div class="form-group row">
+                <div class="form-group col-4">
+                  <img class="iconos" src="./images/icono1.svg" alt="iconoUno"><input type="text" name="txtPuertas" id="puertas" required placeholder="Puertas" class="form-control form-control-sm">
+                </div>
+                <div class="form-group col-4">
+                  <img class="iconos" src="./images/icono2.svg" alt="iconoDos"><input type="text" name="txtPuertas" id="kms" required placeholder="KMs" class="form-control form-control-sm">
+                </div>
+                <div class="form-group col-4">
+                  <img class="iconos" src="./images/icono3.svg" alt="iconoTres"><input type="text" name="txtPuertas" id="potencia" required placeholder="Potencia" class="form-control form-control-sm">
+                </div>
+              </div>
+              
             </fieldset>
             <!--Botones-->
             <input type="submit" id="btnPrincipal" value="Guardar" class="btn btn-success">
@@ -90,29 +105,26 @@
     <!--FILTROS Y PROMEDIO-->
     
     <div class="container bg-secondary text-dark rounded w-auto p-3 border border-dark">
-      <div class="row text-center" >
+      <div class="form-group row" >
           <div class="col ">
              <div class="bg-transparent text-dark">
                 <strong>
                     <label  for="filtroTransaccion">Filtrar Transaccion </label>
                 </strong>
-                <select name="filtrar" id="filtro" class="form-control">
+                <select name="filtrar" id="filtro" class="form-select">
                   <option name="selectTransacccion" value="#">Seleccione la transaccion</option>
                   <option name="selectTransacccion" value="venta">Venta</option>
                   <option name="selectTransacccion" value="alquiler">Alquiler</option>
                 </select>              
              </div>
-
-          </div> 
-
+          </div>
           <div class="col">
-
               <div class="bg-transparent text-dark">
                   <strong>
                       <label for="promedio" class="col-sm-2 col-form-label">Promedio</label>
                   </strong>
                   <br>
-                  <input type="text" id="inputPromedio" name="promedio" placeholder="N/A">
+                  <input class="form-control form-control-sm" type="text" id="inputPromedio" name="promedio" placeholder="N/A">
               </div>              
           </div> 
         </div>
